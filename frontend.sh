@@ -19,3 +19,7 @@ unzip /tmp/frontend.zip
 
 
 systemctl restart nginx
+
+
+
+
