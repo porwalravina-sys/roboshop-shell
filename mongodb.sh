@@ -1,3 +1,6 @@
+#!/bin/bash
+source ./common.sh
+
 cp mongo.repo /etc/yum.repos.d/mongo.repo &>>log_file
 Status_Print $?
 
