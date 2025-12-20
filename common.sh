@@ -7,6 +7,7 @@ Status_Print() {
       echo -e " \e[32mSUCCESS\e[0m"
     else
       echo -e " \e[31mFAILURE\e[0m"
+      exit 1S
     fi
 }
 
@@ -25,7 +26,10 @@ SYSTEMD_SETUP() {
 
 APP_PREREQ() {
     echo Create Application User
-    useradd roboshop &>>$log_file
+    id roboshop &>>log_file
+    if [ $? -eq 1 ]; then
+      useradd roboshop &>>log_file
+
     Status_Print $?
 
     echo Remove Application Directory
