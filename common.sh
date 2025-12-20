@@ -29,7 +29,7 @@ APP_PREREQ() {
     id roboshop &>>log_file
     if [ $? -eq 1 ]; then
       useradd roboshop &>>log_file
-
+    fi
     Status_Print $?
 
     echo Remove Application Directory
