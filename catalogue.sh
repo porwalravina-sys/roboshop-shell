@@ -1,5 +1,5 @@
 source ./common.sh
-app_name = catalogue
+app_name=catalogue
 
 NODEJS
 
